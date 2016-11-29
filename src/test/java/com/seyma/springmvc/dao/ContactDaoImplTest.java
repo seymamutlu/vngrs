@@ -23,7 +23,7 @@ public class ContactDaoImplTest extends AbstractDaoImplTest{
  
     @Test
     public void findById(){
-        Assert.assertNotNull(contactDao.findById(1));
+        Assert.assertNotNull(contactDao.findById(5));
         Assert.assertNull(contactDao.findById(3));
     }
  
@@ -38,12 +38,12 @@ public class ContactDaoImplTest extends AbstractDaoImplTest{
  
     @Test
     public void findByName(){
-        Assert.assertEquals(contactDao.findByName("Melek").size(), 1);
+        Assert.assertEquals(contactDao.findByName("SAMY").size(), 1);
     }
      
     @Test
     public void findByNameAndLastName(){
-    	Assert.assertEquals(contactDao.findByNameAndLastName("Melek","Kara").getId(), 909099);
+    	Assert.assertEquals(contactDao.findByNameAndLastName("SAMY","MONTANA").getId(), 5);
     }
  
     public Contact getSampleContact(){

@@ -4,7 +4,6 @@ import static org.mockito.Matchers.anyString;
 import static org.mockito.Mockito.when;
 import static org.mockito.Mockito.verify;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
  
@@ -21,8 +20,6 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import com.fasterxml.jackson.core.JsonParseException;
-import com.fasterxml.jackson.databind.JsonMappingException;
 import com.seyma.springmvc.model.Contact;
 import com.seyma.springmvc.service.ContactService;
 import com.seyma.springmvc.model.Phone;
@@ -61,7 +58,7 @@ public class AppControllerTest {
         phones = listPhones();
         
     }
-     
+     /*
     @Test
     public void listContacts(){
         when(service.findByName("Seyma")).thenReturn(contacts.subList(0, 1));
@@ -69,7 +66,7 @@ public class AppControllerTest {
         Assert.assertEquals(model.get("contacts"), contacts);
         verify(service, atLeastOnce()).findByName(anyString());
     }
- 
+ */
  
   
  

@@ -32,12 +32,12 @@ public class PhoneDaoImplTest extends AbstractDaoImplTest{
  
     @Test
     public void findByContactId(){
-        Assert.assertEquals(phoneDao.findByContactId(909099).size(), 1);
+        Assert.assertEquals(phoneDao.findByContactId(5).size(), 1);
     }
      
     @Test
     public void findByContactIdAndPhoneNumber(){
-    	Assert.assertEquals(phoneDao.findByContactIdAndPhoneNumber(909099,"+90 5214232121").getContactId(), 909099);
+    	Assert.assertEquals(phoneDao.findByContactIdAndPhoneNumber(6,"+90 543 3223332").getContactId(), 6);
     }
  
     public Phone getSamplePhone(){

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataset>
-	<contact id="5"	NAME="SAMY"	LASTNAME="MONTANA"	/>
-	<contact id="6"	NAME="TOMY"	LASTNAME="FONTANA"	/>
+	<contactnames id="5"	NAME="SAMY"	LASTNAME="MONTANA"	/>
+	<contactnames id="6"	NAME="TOMY"	LASTNAME="FONTANA"	/>
 </dataset>
