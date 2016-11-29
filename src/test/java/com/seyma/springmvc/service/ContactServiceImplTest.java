@@ -73,7 +73,7 @@ public class ContactServiceImplTest {
     public void isContactUnique(){
         Contact cnt = contacts.get(0);
         when(dao.findByNameAndLastName(anyString(),anyString())).thenReturn(cnt);
-        Assert.assertEquals(contactService.isContactUnique(cnt.getName(), cnt.getLastName()), true);
+        Assert.assertEquals(contactService.isContactUnique(cnt.getName(), cnt.getLastName()), false);
     }
      
      

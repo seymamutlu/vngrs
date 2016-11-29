@@ -69,7 +69,7 @@ public class PhoneServiceImplTest {
     public void isPhoneNumberNotAddedForContact(){
         Phone cnt = phones.get(0);
         when(dao.findByContactIdAndPhoneNumber(anyInt(),anyString())).thenReturn(cnt);
-        Assert.assertEquals(phoneService.isPhoneNumberNotAddedForContact(cnt.getContactId(), cnt.getPhoneNumber()), true);
+        Assert.assertEquals(phoneService.isPhoneNumberNotAddedForContact(cnt.getContactId(), cnt.getPhoneNumber()), false);
     }
      
      

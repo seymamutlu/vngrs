@@ -64,20 +64,11 @@ public class AppControllerTest {
      
     @Test
     public void listContacts(){
-        when(service.findByName("")).thenReturn(contacts);
+        when(service.findByName("Seyma")).thenReturn(contacts.subList(0, 1));
         Assert.assertEquals(appController.listContacts(model.toString()), "allcontacts");
         Assert.assertEquals(model.get("contacts"), contacts);
         verify(service, atLeastOnce()).findByName(anyString());
     }
-     
-    @Test
-    public void newEmployee() throws JsonParseException, JsonMappingException, IOException{
-        Assert.assertEquals(appController.importContacts(model.toString()), "registration");
-        Assert.assertNotNull(model.get("employee"));
-        Assert.assertFalse((Boolean)model.get("edit"));
-        Assert.assertEquals(((Contact)model.get("contact")).getId(), 0);
-    }
- 
  
  
   
